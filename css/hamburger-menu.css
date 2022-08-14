@@ -1,0 +1,50 @@
+#open-btn {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: var(--text-primary);
+    z-index: 9999;
+    width: fit-content;
+}
+
+#open-btn i {
+    font-size: 2.5em;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    background-color: var(--background-primary);  
+    overflow-x: hidden; 
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%; 
+    text-align: center; 
+    margin-top: 3em; 
+}
+  
+.overlay a {
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: var(--text-accent);
+    display: block; 
+}
+  
+.overlay .closebtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2.5em;
+    padding: 0;
+    color: var(--text-accent)
+}
+  

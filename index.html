@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="css/hamburger-menu.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Playground</title>
+    </head>
+    <body>
+        <header class="my-header min-width">        
+            <div class="container d-lg-show">
+                <!-- navbar desktop-->
+               <nav class="navbar flex-center-between">
+                    <div class="playground flex-center">
+                        <img src="assets/images/logo-playground-white.png" alt="playground-logo">
+                    </div>
+                    
+                    <div class="navbar-menu flex-center-between">
+                        <div class="menu-element">
+                            <a href="#">we are</a>
+                        </div>
+                        <div class="menu-element">
+                            <a href="#">we do</a>
+                        </div>
+                        <div class="menu-element">
+                            <a href="#">careers</a>
+                        </div>
+                        <div class="menu-element">
+                            <a href="#">contact us</a>
+                        </div>
+                    </div>
+                </nav>
+                <!-- /navbar desktop-->
+            </div>
+
+            <!-- navbar mobile-->
+            <!-- The overlay -->
+            <div id="myNav" class="overlay d-lg-hide">
+
+                <!-- Button to close the overlay navigation -->
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+                <!-- Overlay content -->
+                <div class="overlay-content">
+                <a href="#">we are</a>
+                <a href="#">we do</a>
+                <a href="#">careers</a>
+                <a href="#">contact us</a>
+                </div>
+            
+            </div>
+            
+            <!-- Use any element to open/show the overlay navigation menu -->
+            <div class="d-lg-hide" id="open-btn" onclick="openNav()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <!-- /navbar mobile-->
+
+            <div class="owl-carousel owl-theme header">
+                <div class="slider-card hello">
+                    <div class="overlay-slider"></div>
+                    <div class="text">
+                        <h1>lorem<br>ipsum.</h1>
+                        <p>
+                            Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
+                            Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
+                            in semper nisl bibendum eu.
+                        </p>
+                    </div>
+                </div>
+                <div class="slider-card play">
+                    <div class="overlay-slider"></div>
+                    <div class="text">
+                        <h1>lorem<br>ipsum.</h1>
+                        <p>
+                            Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
+                            Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
+                            in semper nisl bibendum eu.
+                        </p>
+                    </div>
+                </div>
+                <div class="slider-card circle">
+                    <div class="overlay-slider"></div>
+                    <div class="text">
+                        <h1>lorem<br>ipsum.</h1>
+                        <p>
+                            Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
+                            Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
+                            in semper nisl bibendum eu.
+                        </p>
+                    </div>
+                </div>
+            </div> 
+        </header>
+
+        <main class="min-width">
+            <section class="cards desktop min-width d-lg-show">
+                <div class="container">
+                    <div class="card">
+                        <div class="title play-harder"></div>
+                        <div class="text">
+                            Aenean mollis dolor a mattis viverra. 
+                            In hac habitasse platea dictumst. 
+                            Curabitur tempus dui tortor, et bibendum lacus eleifend ut.
+                        </div>
+                        <div class="cta">READ MORE</div>
+                    </div>
+                    <div class="card">
+                        <div class="title simplicity"></div>
+                        <div class="text">
+                            Donec vitae augue tellus. 
+                            Proin et urna sit amet metus 
+                            fermentum dapibus non quis urna.
+                        </div>
+                        <div class="cta">READ MORE</div>
+                    </div>
+                    <div class="card">
+                        <div class="title innovation"></div>
+                        <div class="text">
+                            Suspendisse vehicula, 
+                            lectus sed molestie aliquam, 
+                            arcu neque gravida lacus.
+                        </div>
+                        <div class="cta">READ MORE</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- section cards mobile -->
+            <section class="cards mobile min-width d-lg-hide">
+                <div class="owl-carousel owl-theme section-card d-sm-show d-lg-hide">
+                    <div class="card">
+                        <div class="title play-harder"></div>
+                        <div class="text">
+                            Aenean mollis dolor a mattis viverra. 
+                            In hac habitasse platea dictumst. 
+                            Curabitur tempus dui tortor, et bibendum lacus eleifend ut.
+                        </div>
+                        <div class="cta">READ MORE</div>
+                    </div>
+                    <div class="card">
+                        <div class="title simplicity"></div>
+                        <div class="text">
+                            Donec vitae augue tellus. 
+                            Proin et urna sit amet metus 
+                            fermentum dapibus non quis urna.
+                        </div>
+                        <div class="cta">READ MORE</div>
+                    </div>
+                    <div class="card">
+                        <div class="title innovation"></div>
+                        <div class="text">
+                            Suspendisse vehicula, 
+                            lectus sed molestie aliquam, 
+                            arcu neque gravida lacus.
+                        </div>
+                        <div class="cta">READ MORE</div>
+                    </div>
+                </div> 
+            </section>
+        </main>
+
+
+    <script src="javascript/jquery-3.6.0.min.js"></script>   
+    <script src="javascript/owl.carousel.min.js"></script>
+    <script src="javascript/hamburger-menu.js"></script>
+    <script src="javascript/script.js"></script>
+
+    </body>
+</html>
