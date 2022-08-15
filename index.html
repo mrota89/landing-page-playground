@@ -38,34 +38,28 @@
             </div>
 
             <!-- navbar mobile-->
-            <!-- The overlay -->
             <div id="myNav" class="overlay d-lg-hide">
-
-                <!-- Button to close the overlay navigation -->
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            
-                <!-- Overlay content -->
                 <div class="overlay-content">
                 <a href="#">we are</a>
                 <a href="#">we do</a>
                 <a href="#">careers</a>
                 <a href="#">contact us</a>
                 </div>
-            
             </div>
-            
-            <!-- Use any element to open/show the overlay navigation menu -->
             <div class="d-lg-hide" id="open-btn" onclick="openNav()">
                 <i class="fas fa-bars"></i>
             </div>
             <!-- /navbar mobile-->
 
+            <!-- slider-desktop -->
             <div class="owl-carousel owl-theme header">
                 <div class="slider-card hello">
+                    <!-- layer visibile da mobile per migliorare leggibilità del testo -->
                     <div class="overlay-slider"></div>
                     <div class="text">
-                        <h1>lorem<br>ipsum.</h1>
-                        <p>
+                        <h1 class="caption">lorem<br>ipsum.</h1>
+                        <p class="caption">
                             Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
                             Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
                             in semper nisl bibendum eu.
@@ -75,8 +69,8 @@
                 <div class="slider-card play">
                     <div class="overlay-slider"></div>
                     <div class="text">
-                        <h1>lorem<br>ipsum.</h1>
-                        <p>
+                        <h1 class="caption">lorem<br>ipsum.</h1>
+                        <p class="caption">
                             Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
                             Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
                             in semper nisl bibendum eu.
@@ -86,8 +80,8 @@
                 <div class="slider-card circle">
                     <div class="overlay-slider"></div>
                     <div class="text">
-                        <h1>lorem<br>ipsum.</h1>
-                        <p>
+                        <h1 class="caption">lorem<br>ipsum.</h1>
+                        <p class="caption">
                             Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
                             Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
                             in semper nisl bibendum eu.
@@ -98,6 +92,7 @@
         </header>
 
         <main class="min-width">
+            <!-- section-card-desktop -->
             <section class="cards desktop min-width d-lg-show">
                 <div class="container">
                     <div class="card">
@@ -161,6 +156,49 @@
                         <div class="cta">READ MORE</div>
                     </div>
                 </div> 
+            </section>
+
+            <!-- section banners -->
+            <section class="banners min-width">
+                <div class="banner">
+                    <div class="banner-image we-are"></div>
+                    <div class="banner-text">
+                        <div class="inner-text">
+                            <h1 class="title caption">we<br>are.</h1>
+                            <p class="text-body caption">
+                                Consectetur adipiscing elit.<br>
+                                Nulla condimentum tortor sem.
+                            </p>
+                            <div class="cta">THE PLAYERS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="banner-image we-do"></div>
+                    <div class="banner-text">
+                        <div class="inner-text">
+                            <h1 class="title caption">we<br>do.</h1>
+                            <p class="text-body caption">
+                                Consectetur adipiscing elit.<br>
+                                Nulla condimentum tortor sem.
+                            </p>
+                            <div class="cta">THE PROJECTS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="banner-image careers"></div>
+                    <div class="banner-text">
+                        <div class="inner-text">
+                            <h1 class="title caption">careers.</h1>
+                            <p class="text-body caption">
+                                Consectetur adipiscing elit.<br>
+                                Nulla condimentum tortor sem.
+                            </p>
+                            <div class="cta">THE POSITION</div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
