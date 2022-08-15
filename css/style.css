@@ -1,9 +1,11 @@
-/*general-style*/
+/*common-style*/
 :root {
---text-primary: #f1f1f1;
+--text-primary: #fff;
 --text-accent: #000;
 --ham-menu: #818181;
 --background-primary: #EBEBEB;
+--background-primary-banner: #fff;
+--background-accent-banner: #000;
 }
 
 @font-face {
@@ -67,18 +69,18 @@ p.caption {
 .cta {
     height: 50px;
     width: 100%;
-    background-color: #000;
+    background-color: var(--background-accent-banner);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-primary);
-    border: solid 1px #000;
+    border: solid 1px var(--background-accent-banner);
     transition: 0.3s;
 }
 
 .cta:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--background-primary-banner);
+    color: var(--text-accent);
     cursor: pointer;
 }
 
@@ -96,14 +98,16 @@ p.caption {
     top: 2%;
     z-index: 1001;
     display: none;
-    transition: 0.3s;
+    transition: 1.5s;
 }
 
 .my-header .container.sticky {
     position: fixed;
+    padding: 0 4em;
+    min-width: 100%;
     top: 0;
     width: 100%;
-    background-color: #000;
+    background-color: var(--background-accent-banner);
 }
 
 .my-header .container .navbar {
@@ -299,8 +303,8 @@ section.cards .container .card {
     text-align: center;
     padding: 2em 3.5em;
     line-height: 1.6em;
-    background-color: #fff;
-    font-weight: 600;
+    background-color: var(--background-primary-banner);
+    font-size: 1em;
 }
 
 section.cards .owl-theme .owl-dots {
@@ -312,7 +316,7 @@ section.cards .owl-theme .owl-dots .owl-dot.active span {
 }
 
 /*section banners*/
-section.banners .banner{
+section.banners .banner {
     width: 100%;
     height: 600px;
     display: flex;
@@ -361,6 +365,7 @@ section.banners .banner{
     width: 60%;
     margin-top: 2em;
     position: relative;
+    width: 70%;
 }
 
 .banner-text .inner-text .cta::after {
@@ -370,39 +375,32 @@ section.banners .banner{
     display: inline-block;
     height: 0.5em;
     position: absolute;
-    left: 90%;
+    left: 85%;
     transform: rotate(45deg);
     vertical-align: top;
     width: 0.5em;
     color: var(--text-primary);
+    transition: 0.3s;
 }
 
+/*primo e terzo banner*/
 .banner:first-child .banner-text .inner-text .cta,
 .banner:last-child .banner-text .inner-text .cta {
-    background-color: #000;
-    color: var(--text-primary);
     border: solid 1px var(--text-primary);
 }
 
-.banner:first-child .banner-text .inner-text .cta:hover::after,
-.banner:last-child .banner-text .inner-text .cta:hover::after:hover {
-    color: var(--text-accent)
-
-}
-
-.banner:first-child .banner-text .inner-text .cta:hover,
-.banner:last-child .banner-text .inner-text .cta:hover {
-    background-color: #fff;
-    border: solid 1px #fff;
+.banner:first-child .banner-text .inner-text .cta:hover:hover::after,
+.banner:last-child .banner-text .inner-text .cta:hover:hover::after {
     color: var(--text-accent);
 }
 
+/*banner centrale*/
 section.banners .banner:nth-child(2) {
     flex-direction: row-reverse;
 }
 
 .banner:nth-child(2) .banner-text {
-    background-color: #fff;
+    background-color: var(--background-primary-banner);
 }
 
 .banner:nth-child(2) .banner-text .inner-text {
@@ -415,22 +413,23 @@ section.banners .banner:nth-child(2) {
 }
 
 .banner:nth-child(2) .banner-text .inner-text .cta {
-    background-color: #fff;
+    background-color: var(--background-primary-banner);
     color: var(--text-accent);
-    border: solid 1px #000;
+    border: solid 1px var(--background-accent-banner);
 }
 
 .banner:nth-child(2) .banner-text .inner-text .cta::after {
-    color: var(--text-primary);
+    color: var(--text-accent)
+}
+
+.banner:nth-child(2) .banner-text .inner-text .cta:hover::after {
+    color: var(--text-primary)
 }
 
 .banner:nth-child(2) .banner-text .inner-text .cta:hover {
-    background-color: #000;
-    color: #fff;
+    background-color: var(--background-accent-banner);
+    color: var(--text-primary);
 }
-
-
-
 
 /*media queries min-width*/
 @media screen and (min-width: 576px) {
@@ -469,7 +468,6 @@ section.banners .banner:nth-child(2) {
         padding-left: 2em;
         padding-right: 2em;
     }
-
 }
 
 @media screen and (min-width: 1200px) {
@@ -486,6 +484,7 @@ section.banners .banner:nth-child(2) {
         padding-left: 0em;
         padding-right: 0em;
     }
+
 }
 
 @media screen and (min-width: 1400px) {
@@ -500,11 +499,14 @@ section.banners .banner:nth-child(2) {
 }
 
 /* media queries max-width*/
-
 @media screen and (max-width: 1200px) {
     .owl-theme .owl-item .slider-card .overlay {
         width: 100%;
         height: 100%;
+    }
+
+    section.banners .banner .banner-text .inner-text{
+        width: 70%;
     }
 }
 
@@ -520,11 +522,35 @@ section.banners .banner:nth-child(2) {
     .card .text {
         padding: 2em 5em;
     }
+
+    section.banners .banner {
+        flex-direction: column !important;
+        height: fit-content;
+    }
+
+    section.banners .banner .banner-image,
+    section.banners .banner .banner-text {
+        width: 100%;
+        height: 450px;
+    }
+
+    section.banners .banner .banner-text .inner-text{
+        width: 40%;
+        left: 30%;
+    }
+
+    section.banners .banner:nth-child(2) .banner-text .inner-text{
+        left: 70%;
+    }
+
+    section.banners .banner .banner-image{
+        height: 600px;
+    }
 }
 
 @media  screen and (max-width: 768px) {
     .owl-item .slider-card .text {
-        width: max-content;
+        width: 50%!important;
         left: 40%;
     }
 
@@ -533,13 +559,19 @@ section.banners .banner:nth-child(2) {
     }
 
     .card .text {
-        padding: 2em 12em;
+        padding: 2em 2em;
     }
+
 }
 
 @media screen and (max-width: 600px) {
     .card .text {
-        padding: 2em 5em;
+        padding: 1em 6em;
+    }
+
+    section.banners .banner .banner-text .inner-text {
+        width: 80%;
+        left: 50% !important;
     }
 }
 

@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
                 items:1,
                 nav:false
             },
-            768: {
+            600: {
                 nav: false,
                 items: 2
             }
