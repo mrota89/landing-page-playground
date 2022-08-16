@@ -2,7 +2,7 @@
 :root {
 --text-primary: #fff;
 --text-accent: #000;
---ham-menu: #818181;
+--background-accent: #d9d9d9;
 --background-primary: #EBEBEB;
 --background-primary-banner: #fff;
 --background-accent-banner: #000;
@@ -431,6 +431,45 @@ section.banners .banner:nth-child(2) {
     color: var(--text-primary);
 }
 
+/*tabs section*/
+section.tabs {
+    background: var(--background-primary);
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+section.tabs .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 3em 0;
+}
+
+section.tabs .container .tabs-box {
+    width: 33%;
+}
+
+section.tabs .container .tabs-box .cta.disactive {
+    background-color: var(--background-accent);
+    color: var(--background-accent-banner);
+    border-color: var(--background-primary-banner);
+}
+
+section.tabs .container .tabs-box .cta:hover,
+section.tabs .container .tabs-box .cta.disactive:hover {
+    background-color: var(--background-accent-banner);
+    color: var(--text-primary);
+    border: solid 1px var(--background-accent-banner);
+    transition: 0.3s;
+}
+
+section.tabs .container .text-box {
+    width: 67%;
+    background-color: var(--background-primary-banner);
+    padding: 3em 6.5em;
+    height: 350px;
+}
+
 /*media queries min-width*/
 @media screen and (min-width: 576px) {
     /*small*/
@@ -523,6 +562,7 @@ section.banners .banner:nth-child(2) {
         padding: 2em 5em;
     }
 
+    /*section banners*/
     section.banners .banner {
         flex-direction: column !important;
         height: fit-content;
@@ -546,6 +586,30 @@ section.banners .banner:nth-child(2) {
     section.banners .banner .banner-image{
         height: 600px;
     }
+
+    /*tabs-section*/
+    section.tabs .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 3em 0;
+    }
+
+    section.tabs .container .tabs-box,
+    section.tabs .container .text-box {
+        width: 100%;
+    }
+
+    section.tabs .container .tabs-box {
+        display: flex;
+    }
+
+    section.tabs .container .text-tabs .cta {
+        width: calc(100% / 3);
+    }
+
+    section.tabs .container .text-box {
+        padding: 3em 2em;
+    } 
 }
 
 @media  screen and (max-width: 768px) {
@@ -562,6 +626,9 @@ section.banners .banner:nth-child(2) {
         padding: 2em 2em;
     }
 
+    section.tabs .container .text-box {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -570,8 +637,13 @@ section.banners .banner:nth-child(2) {
     }
 
     section.banners .banner .banner-text .inner-text {
-        width: 80%;
+        width: 70%;
         left: 50% !important;
+    }
+
+    section.tabs .container .tabs-box {
+        flex-direction: column;
+        width: 100%;
     }
 }
 
