@@ -38,7 +38,7 @@
             </div>
 
             <!-- navbar mobile-->
-            <div id="myNav" class="overlay d-lg-hide">
+            <div id="mobile-nav" class="overlay d-lg-hide">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
                 <a href="#">we are</a>
@@ -207,14 +207,16 @@
                         <div class="cta" onclick="getTabContent('Vestibulum at odio sit amet')">
                             Vestibulum at odio sit amet
                         </div>
-                        <div class="cta disactive" onclick="getTabContent('Sed vehicula neque')">
+                        <div class="cta disabled" onclick="getTabContent('Sed vehicula neque')">
                             Sed vehicula neque
                         </div>
-                        <div class="cta disactive" onclick="getTabContent('Nulla id libero pretium')">
+                        <div class="cta disabled" onclick="getTabContent('Nulla id libero pretium')">
                             Nulla id libero pretium
                         </div>
                     </div>
-                    <div id="tab-text-box" class="text-box"></div>
+                    <div id="tab-text-box" class="text-box">
+                        <img src="assets/images/loader.png" alt="loader">
+                    </div>
                 </div>
 
             </section>

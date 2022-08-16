@@ -43,37 +43,41 @@ function getTabContent(tabTitle) {
 
         //controllo quale tab è precedentemente attivata e la disattivo
         allTabs.forEach(element => {
-            if(!element.className.includes("disactive")) {
-                element.classList.add("disactive");
+            if(!element.className.includes("disabled")) {
+                element.classList.add("disabled");
             }
         })
 
         //attivo la tab cliccata
-        elementClassList.remove("disactive");
+        elementClassList.remove("disabled");
     });
 
-    let loader = document.getElementById("tab-loader");
+    //ajax call
     let xhr = new XMLHttpRequest();
-   
- 
     xhr.open('GET', `${baseUrl}${jsonFileName}`, true);
+
+    //al caricamento mostro il loader
     xhr.onprogress = () => {
-        console.log("carico")
-        //document.getElementById("tabs-box").append('<img src="assets/images/loader.png" alt="loader">');
+        document.getElementById("tab-text-box").innerHTML = '<img style="margin-top: 80px;" src="assets/images/loader.png" alt="loader">';
     };
-    xhr.onload = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log("finito")
-            createContentTab(xhr);  
-        } else {
-            if(this.status >= 400) {
-                console.error(`There was a problem with the request. Error code: ${this.status}`);
+
+    //al termine del caricamento eseguo render della response
+    xhr.onloadend = function() {
+        //setTimeout serve per simulare ritardo nella risposta
+        setTimeout(() => {
+            if (this.readyState == 4 && this.status == 200) {
+                createContentTab(xhr);  
+            } else {
+                if(this.status >= 400) {
+                    console.error(`There was a problem with the request. Error code: ${this.status}`);
+                }
             }
-        }
+        }, 2000)
     };
-    xhr.send(false)
+    xhr.send()
 }
 
+//al caricamento della pagina, mostro il primo tab
 window.onload = getTabContent("Vestibulum at odio sit amet");
 
   
