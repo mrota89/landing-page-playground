@@ -39,12 +39,15 @@
 
             <!-- navbar mobile-->
             <div id="mobile-nav" class="overlay d-lg-hide">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content">
-                <a href="#we-are">we are</a>
-                <a href="#we-do">we do</a>
-                <a href="#careers">careers</a>
-                <a href="#contact-us">contact us</a>
+                    <div id="logo-navbar-mobile" class="playground">
+                        <img src="assets/images/logo-playground-black.png" alt="playground-logo">
+                    </div>
+                    <a href="#we-are" onclick="closeNav()">we are</a>
+                    <a href="#we-do" onclick="closeNav()">we do</a>
+                    <a href="#careers" onclick="closeNav()">careers</a>
+                    <a href="#contact-us" onclick="closeNav()">contact us</a>
                 </div>
             </div>
             <div class="d-lg-hide" id="open-btn" onclick="openNav()">
@@ -245,9 +248,9 @@
 
                         <div class="bottom-input">
                             <input type="email" id="email" name="email" placeholder="email" value="" required>
-                            <div id="error-email" class="error email">Errore: formato email non corretto</div> <!-- messaggio errore input email -->
+                            <div id="error-email" class="error email"></div> <!-- messaggio errore input email -->
                             <textarea id="message" name="message" placeholder="message" required></textarea>
-                            <div id="error-message" class="error message">Errore: sono stati digitati caratteri non ammessi</div> <!-- messaggio errore input email -->
+                            <div id="error-message" class="error message"></div> <!-- messaggio errore input email -->
                         </div> 
                         <button id="send-button" class="cta contact-us" disabled>SEND</button>
                     </form>

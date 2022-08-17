@@ -11,6 +11,19 @@
     font-size: 2.5em;
 }
 
+#closebtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2.5em;
+    padding: 0;
+    color: var(--text-accent)
+}
+
+#logo-navbar-mobile {
+    padding: 1em;
+}
+
 .overlay {
     height: 100%;
     width: 0;
@@ -39,12 +52,4 @@
     display: block; 
 }
   
-.overlay .closebtn {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 2.5em;
-    padding: 0;
-    color: var(--text-accent)
-}
   

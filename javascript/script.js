@@ -36,8 +36,7 @@ $('.owl-carousel.section-card').owlCarousel({
 function stickyOnScroll() {
     let navbar = document.querySelector(".my-header .container");
     let sticky = navbar.offsetTop;
-
-    if (window.pageYOffset >= sticky) {
+    if (window.pageYOffset > sticky) {
         navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky");
@@ -53,9 +52,16 @@ function openNav() {
 //close hamburger menu
 function closeNav() {
     document.getElementById("mobile-nav").style.width = "0vh";
-    document.getElementById("open-btn").classList.remove("hide");
+    setTimeout(() => {
+        document.getElementById("open-btn").classList.remove("hide");
+    }, 200);
 }
 
-window.onscroll = function() {
-    stickyOnScroll()
-};
+//applica comportamento "sticky" della navbar on scroll e onload
+window.onscroll = stickyOnScroll;
+window.onload = stickyOnScroll;
+
+
+
+
+

@@ -9,10 +9,13 @@ let validateMessage;
 //funzione generica per controllo input
 function validateInput(inputValue, regex, returnError, error) {
     if(!regex.test(inputValue) && inputValue.length > 0){
-        error.style.display = "block";
+        error.innerText = "Input errato!";
         returnError = true;
-    } else{
-        error.style.display = "none";
+    } else if(inputValue.length === 0) {
+        error.innerText = "Campo obbligatorio!";
+        returnError = true;
+    } else {
+        error.innerText = "";
         returnError = false;
     }
     return returnError;
@@ -20,10 +23,10 @@ function validateInput(inputValue, regex, returnError, error) {
 
 //funzione per disattivare/abilitare bottone di invio
 function enableButtonSend() {
-    if(validateMessage && validateEmail) {
+    if(!validateMessage && !validateEmail) {
         getSendButton.removeAttribute("disabled");
-    } else if((!validateMessage || !validateEmail) && !getSendButton.hasAttribute("disabled")) {
-        getSendButton.setAttribute("disabled", "true");
+    } else if((validateMessage || validateEmail) && !getSendButton.hasAttribute("disabled")) {
+        getSendButton.setAttribute("disabled", "");
     }
 }
 
@@ -32,7 +35,7 @@ function emailCheck() {
     let email = document.getElementById("email");
     let emailValue = email.value;
     let emailRegex = /^[_\-\.0-9a-zA-Z]+@[_\-\.0-9a-zA-Z]+\.[a-zA-Z]{2,7}$/;
-    let emailError = false;
+    let emailError = true;
 
     validateEmail = validateInput(emailValue, emailRegex, emailError, getErrorEmail);
     enableButtonSend();
@@ -42,7 +45,7 @@ function emailCheck() {
 function messageCheck() {
     let message = document.getElementById("message");
     let messageValue = message.value;
-    let messageError = false;
+    let messageError = true;
     let messageRegex = /^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/; //ammette solo carratteri alfanumerici e alcuni cartteri speciali
 
     validateMessage = validateInput(messageValue, messageRegex, messageError, getErrorMessage);

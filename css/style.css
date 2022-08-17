@@ -10,8 +10,7 @@
 
 @font-face {
     font-family: 'Gotham Book';
-    src: url('../assets/fonts/gotham-book-webfont.woff2') format('woff2'),
-         url('../assets/fonts/gotham-book-webfont.woff') format('woff');
+    src: url('../assets/fonts/Gotham-Book.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,6 +20,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gotham Book', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .flex-center-between {
@@ -92,21 +95,16 @@ p.caption {
 }
 
 .my-header .container  {
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-    top: 2%;
+    position: fixed;
+    padding: 0 13em;
     z-index: 1001;
     display: none;
-    transition: 1.5s;
+    top: 0;
+    min-width: 100%;
+    transition: 1s;
 }
 
 .my-header .container.sticky {
-    position: fixed;
-    padding: 0 4em;
-    min-width: 100%;
-    top: 0;
-    width: 100%;
     background-color: var(--background-accent-banner);
 }
 
@@ -116,7 +114,7 @@ p.caption {
 }
 
 .container .navbar .playground {
-    width: 14%;
+    width: 12em;
 }
 
 .navbar .playground img{
@@ -266,6 +264,7 @@ div.cards .container .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 1s;
 }
 
 .container .card:nth-child(2) {
@@ -578,14 +577,13 @@ div.form .inner-form .bottom-input {
 }
 
 div.form .inner-form .bottom-input .error {
-    position: absolute;
     font-size: 0.7em;
     font-weight: bold;
-    color: red;
+    color: rgb(255, 0, 0);
     left: 62%;
     top: 7%;
-    display: none;
-    width: 20em;
+    width: fit-content;
+    padding-bottom: 1em;
 }
 
 div.form .inner-form .bottom-input .error.message {
@@ -599,35 +597,33 @@ div.form .inner-form #message {
     width: 100%;
 }
 
-div.form .inner-form .cta.contact-us {
+div.form .inner-form .cta.contact-us:disabled {
     width: fit-content;
     background-color: var(--background-primary);
     color: var(--text-accent);
     align-self: flex-start;
-    padding: 0 4em;
+    padding: 0.9em 4em;
     letter-spacing: 0.2em;
     font-weight: bold;
     font-size: 1em;
-    height: 3em;
     position: relative;
 }
 
-div.form .inner-form .cta.contact-us:hover {
-    color: var(--text-primary);
-    background-color: var(--background-accent-banner);
-    border: solid 1px var(--background-primary);
+div.form .inner-form .cta.contact-us:disabled:hover {
+    background-color: var(--background-primary);
+    color: var(--text-accent);
+    cursor: not-allowed;
 }
 
-
-div.form .inner-form .cta.contact-us::after {
+div.form .inner-form .cta.contact-us:disabled::after {
     border-style: solid;
     border-width: 0.13em 0.13em 0 0;
     content: '';
     display: inline-block;
     height: 0.5em;
     position: absolute;
+    top: 38%;
     left: 75%;
-    top: 41%;
     transform: rotate(45deg);
     vertical-align: top;
     width: 0.5em;
@@ -635,7 +631,15 @@ div.form .inner-form .cta.contact-us::after {
     transition: 0.3s;
 }
 
-div.form .inner-form .cta.contact-us:hover::after {
+div.form .inner-form .cta.contact-us {
+    color: var(--text-primary);
+    background-color: var(--background-accent-banner);
+    border: solid 1px var(--background-primary);
+    width: fit-content;
+    padding: 0.9em 4em;
+}
+
+div.form .inner-form .cta.contact-us::after {
     color: var(--text-primary);
 }
 
@@ -708,6 +712,12 @@ div.form .inner-form .cta.contact-us:hover::after {
 }
 
 /* media queries max-width*/
+@media screen and (max-width: 1400px) {
+    .my-header .container {
+        padding: 0 4em;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .owl-theme .owl-item .slider-card .overlay {
         width: 100%;
@@ -804,7 +814,7 @@ div.form .inner-form .cta.contact-us:hover::after {
 
 @media  screen and (max-width: 768px) {
     h1.caption {
-        font-size: 3em;
+        font-size: 4em;
     }
 
     .owl-item .slider-card .text {

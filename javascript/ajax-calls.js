@@ -40,7 +40,6 @@ function getTabContent(tabTitle) {
 
         let allTabs = document.querySelectorAll(".tabs .tabs-box .cta");
         let elementClassList = e.target.classList;
-
         //controllo quale tab è precedentemente attivata e la disattivo
         allTabs.forEach(element => {
             if(!element.className.includes("disabled")) {
@@ -50,8 +49,7 @@ function getTabContent(tabTitle) {
 
         //attivo la tab cliccata
         elementClassList.remove("disabled");
-    });
-    
+    }, { once: true });
 
     //ajax call
     let xhr = new XMLHttpRequest();
@@ -73,7 +71,7 @@ function getTabContent(tabTitle) {
                     console.error(`There was a problem with the request. Error code: ${this.status}`);
                 }
             }
-        }, 2000)
+        }, 1500)
     };
     xhr.send()
 }
