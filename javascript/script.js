@@ -33,20 +33,16 @@ $('.owl-carousel.section-card').owlCarousel({
 });
 
 //scroll sticky navbar
-let navbar = document.querySelector(".my-header .container");
-let sticky = navbar.offsetTop;
-
 function stickyOnScroll() {
+    let navbar = document.querySelector(".my-header .container");
+    let sticky = navbar.offsetTop;
+
     if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
     } else {
         navbar.classList.remove("sticky");
     }
 }
-
-window.onscroll = function() {
-    stickyOnScroll()
-};
 
 //open hamburger menu
 function openNav() {
@@ -60,7 +56,6 @@ function closeNav() {
     document.getElementById("open-btn").classList.remove("hide");
 }
 
-
-   
-
-
+window.onscroll = function() {
+    stickyOnScroll()
+};

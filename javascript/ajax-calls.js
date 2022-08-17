@@ -51,6 +51,7 @@ function getTabContent(tabTitle) {
         //attivo la tab cliccata
         elementClassList.remove("disabled");
     });
+    
 
     //ajax call
     let xhr = new XMLHttpRequest();
@@ -58,7 +59,7 @@ function getTabContent(tabTitle) {
 
     //al caricamento mostro il loader
     xhr.onprogress = () => {
-        document.getElementById("tab-text-box").innerHTML = '<img style="margin-top: 80px;" src="assets/images/loader.png" alt="loader">';
+        document.getElementById("tab-text-box").innerHTML = '<img src="assets/images/loader.png" alt="loader">';
     };
 
     //al termine del caricamento eseguo render della response
