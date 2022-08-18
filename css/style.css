@@ -6,6 +6,7 @@
 --background-primary: #EBEBEB;
 --background-primary-banner: #fff;
 --background-accent-banner: #000;
+--footer-icon: #665f5f;
 }
 
 @font-face {
@@ -87,6 +88,9 @@ p.caption {
     cursor: pointer;
 }
 
+.m-b-cookie {
+    margin-bottom: 6em;
+}
 
 /*header, navbar, slider*/
 .my-header {
@@ -643,6 +647,107 @@ div.form .inner-form .cta.contact-us::after {
     color: var(--text-primary);
 }
 
+/*footer*/
+footer {
+    background-color: var(--background-accent-banner);
+    border-top: 0.1em solid var(--background-primary);
+}
+
+footer .container {
+    display: flex;
+    padding: 4em 5em;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container .logo-footer {
+    width: 10em;
+    margin-bottom: 4em;
+}
+
+footer .container .logo-footer img {
+    width: 100%;
+}
+
+footer .container ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 4em;
+}
+
+footer .container ul li a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: normal;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    position: relative;
+}
+
+footer .container .social {
+    width: 7em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container .social a {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+footer .container .social a i {
+    font-size: 1.5em;
+    color: var(--footer-icon);
+    transition: 0.3s;
+}
+
+footer .container .social a:hover i {
+    color: var(--text-primary);
+}
+
+footer .container ul li a:after {    
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    top: 22px;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+footer .container ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background-primary-banner);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1em 0;
+    z-index: 1002;
+    display: none;
+}
+
+.cookie-banner p.caption {
+    margin-top: 0;
+    line-height: unset;
+    font-size: 0.8em;
+}
+
+.cookie-banner .cta {
+    width: 10em;
+}
+
 
 /*media queries min-width*/
 @media screen and (min-width: 576px) {
@@ -726,6 +831,22 @@ div.form .inner-form .cta.contact-us::after {
 
     div.banners .banner .banner-text .inner-text{
         width: 70%;
+    }
+
+    .cookie-banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cookie-banner p.caption{
+        text-align: center;
+        padding: 0 1em;
+        line-height: 1.5;
+    }
+
+    .cookie-banner .cta {
+        margin-top: 1em;
     }
 }
 
@@ -855,7 +976,19 @@ div.form .inner-form .cta.contact-us::after {
     div.form .inner-form .top-input input {
         width: 100%;
     }
-    
+
+    footer .container .logo-footer {
+        margin-bottom: 2em;
+    }
+
+    footer .container ul {
+        justify-content: center;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 10em;
+        align-items: center;
+        margin-bottom: 2em;
+    }
 }
 
 /*animation*/

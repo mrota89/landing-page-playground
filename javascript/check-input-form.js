@@ -1,18 +1,18 @@
-let getEmail = document.getElementById("email");
-let getMessage = document.getElementById("message");
-let getSendButton = document.getElementById("send-button");
-let getErrorEmail = document.getElementById("error-email");
-let getErrorMessage = document.getElementById("error-message");
+const getEmail = document.getElementById("email");
+const getMessage = document.getElementById("message");
+const getSendButton = document.getElementById("send-button");
+const getErrorEmail = document.getElementById("error-email");
+const getErrorMessage = document.getElementById("error-message");
 let validateEmail;
 let validateMessage;
 
 //funzione generica per controllo input
 function validateInput(inputValue, regex, returnError, error) {
     if(!regex.test(inputValue) && inputValue.length > 0){
-        error.innerText = "Input errato!";
+        error.innerText = "Input error!";
         returnError = true;
     } else if(inputValue.length === 0) {
-        error.innerText = "Campo obbligatorio!";
+        error.innerText = "Required field!";
         returnError = true;
     } else {
         error.innerText = "";

@@ -247,10 +247,10 @@
                         </div>
 
                         <div class="bottom-input">
-                            <input type="email" id="email" name="email" placeholder="email" value="" required>
+                            <input type="email" id="email" name="email" placeholder="email*" value="" required>
                             <div id="error-email" class="error email"></div> <!-- messaggio errore input email -->
-                            <textarea id="message" name="message" placeholder="message" required></textarea>
-                            <div id="error-message" class="error message"></div> <!-- messaggio errore input email -->
+                            <textarea id="message" name="message" placeholder="message*" required></textarea>
+                            <div id="error-message" class="error message"></div> <!-- messaggio errore input message -->
                         </div> 
                         <button id="send-button" class="cta contact-us" disabled>SEND</button>
                     </form>
@@ -258,13 +258,54 @@
                 </div>
             </div>
         </main>
+        <footer id="my-footer" class="min-width">
+            <div class="container">
+                <div class="logo-footer">
+                    <img src="assets/images/logo-playground-white.png" alt="playground-logo">
+                </div>
+                <ul class="footer-link">
+                    <li>
+                        <a href="#we-are">we are</a>
+                    </li>
+                    <li>
+                        <a href="#we-do">we do</a>
+                    </li>
+                    <li>
+                        <a href="#careers">careers</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us">contact us</a>
+                    </li>
+                </ul>
+                <div class="social">
+                    <a href="#">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <div id="cookie-banner" class="cookie-banner">
+            <p class="caption">
+                Our website uses cookies to improve your experience. 
+                To find out more about the cookies we use please see our Cookies Policy.
+            </p>
+            <div class="cta" onclick="acceptCookie()">OK</div>
+        </div>
 
 
-    <script src="javascript/jquery-3.6.0.min.js"></script>   
-    <script src="javascript/owl.carousel.min.js"></script>
-    <script src="javascript/ajax-calls.js"></script>
-    <script src="javascript/check-input-form.js"></script>
-    <script src="javascript/script.js"></script>
+        <script src="javascript/jquery-3.6.0.min.js"></script>   
+        <script src="javascript/owl.carousel.min.js"></script>
+        <script src="javascript/ajax-calls.js"></script>
+        <script src="javascript/check-input-form.js"></script>
+        <script src="javascript/cookies.js"></script>
+        <script src="javascript/script.js"></script>
 
     </body>
 </html>
