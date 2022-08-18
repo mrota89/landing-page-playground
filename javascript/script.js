@@ -46,14 +46,14 @@ function stickyOnScroll() {
 //open hamburger menu
 function openNav() {
     document.getElementById("mobile-nav").style.width = "70vw";
-    document.getElementById("open-btn").classList.add("hide");
+    document.getElementById("open-btn").style.display="none";
 }
 
 //close hamburger menu
 function closeNav() {
     document.getElementById("mobile-nav").style.width = "0vh";
     setTimeout(() => {
-        document.getElementById("open-btn").classList.remove("hide");
+        document.getElementById("open-btn").style.display="block";
     }, 200);
 }
 

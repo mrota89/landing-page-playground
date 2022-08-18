@@ -12,14 +12,14 @@
     </head>
     <body>
         <header class="my-header min-width">        
-            <div class="container d-lg-show">
+            <div class="container d-lg-show min-width">
                 <!-- navbar desktop-->
-               <nav class="navbar flex-center-between">
+               <nav class="navbar flex-center-between w-100">
                     <div class="playground flex-center">
-                        <img src="assets/images/logo-playground-white.png" alt="playground-logo">
+                        <img class="w-100" src="assets/images/logo-playground-white.png" alt="playground-logo">
                     </div>
                     
-                    <div class="navbar-menu flex-center-between">
+                    <div class="menu flex-center-between">
                         <div class="menu-element">
                             <a href="#we-are">we are</a>
                         </div>
@@ -98,9 +98,9 @@
         <main class="min-width">
             <!-- section-card-desktop -->
             <div class="cards desktop min-width d-lg-show">
-                <div class="container">
-                    <div class="card">
-                        <div class="title play-harder"></div>
+                <div class="container d-flex">
+                    <div class="card d-flex">
+                        <div class="title play-harder w-100"></div>
                         <div class="text">
                             Aenean mollis dolor a mattis viverra. 
                             In hac habitasse platea dictumst. 
@@ -108,8 +108,8 @@
                         </div>
                         <div class="cta">READ MORE</div>
                     </div>
-                    <div class="card">
-                        <div class="title simplicity"></div>
+                    <div class="card d-flex">
+                        <div class="title simplicity w-100"></div>
                         <div class="text">
                             Donec vitae augue tellus. 
                             Proin et urna sit amet metus 
@@ -117,8 +117,8 @@
                         </div>
                         <div class="cta">READ MORE</div>
                     </div>
-                    <div class="card">
-                        <div class="title innovation"></div>
+                    <div class="card d-flex">
+                        <div class="title innovation w-100"></div>
                         <div class="text">
                             Suspendisse vehicula, 
                             lectus sed molestie aliquam, 
@@ -164,7 +164,7 @@
 
             <!-- section banners -->
             <div class="banners min-width">
-                <div id="we-are" class="banner">
+                <div id="we-are" class="banner w-100 d-flex">
                     <div class="banner-image we-are"></div>
                     <div class="banner-text">
                         <div class="inner-text">
@@ -177,10 +177,10 @@
                         </div>
                     </div>
                 </div>
-                <div id="we-do" class="banner">
+                <div id="we-do" class="banner w-100 d-flex">
                     <div class="banner-image we-do"></div>
                     <div class="banner-text">
-                        <div class="inner-text">
+                        <div class="inner-text d-flex">
                             <h1 class="title caption">we<br>do.</h1>
                             <p class="text-body caption">
                                 Consectetur adipiscing elit.<br>
@@ -190,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="careers" class="banner">
+                <div id="careers" class="banner w-100 d-flex">
                     <div class="banner-image careers"></div>
                     <div class="banner-text">
                         <div class="inner-text">
@@ -207,7 +207,7 @@
 
             <!-- section 3 tabs -->
             <div class="tabs min-width">
-                <div class="container">
+                <div class="container d-flex">
                     <div class="tabs-box">
                         <div class="cta" onclick="getTabContent('Vestibulum at odio sit amet')">
                             Vestibulum at odio sit amet
@@ -219,16 +219,16 @@
                             Nulla id libero pretium
                         </div>
                     </div>
-                    <div id="tab-text-box" class="text-box">
+                    <div id="tab-text-box" class="text-box d-flex">
                         <img src="assets/images/loader.png" alt="loader">
                     </div>
                 </div>
             </div>
 
             <!-- section form contact us-->
-            <div id="contact-us" class="form min-width">
-                <div class="container">
-                    <div class="contact-us">
+            <div id="contact-us" class="form min-width" onmouseleave="resetFieldError()">
+                <div class="container d-flex">
+                    <div class="contact-us d-flex">
                         <h1 class="title caption d-lg-show">contact<br>us.</h1>
                         <p class="caption">
                             Playground srl<br>
@@ -239,17 +239,18 @@
                         </p>
                     </div>
 
-                    <form class="inner-form" action="pippo" method="post" autocomplete="off">
+                    <form action="javascript:void(0)" class="inner-form d-flex" method="post" autocomplete="off">
                         <h1 class="title caption d-lg-hide">contact us.</h1>
-                        <div class="top-input">
+
+                        <div class="top-input w-100 d-flex">
                             <input type="text" id="first-name" name="firstName" placeholder="name" value="">
                             <input type="text" id="last-name" name="lastName" placeholder="last name" value="">
                         </div>
 
-                        <div class="bottom-input">
-                            <input type="email" id="email" name="email" placeholder="email*" value="" required>
+                        <div class="bottom-input w-100">
+                            <input type="email" id="email" class="w-100" name="email" placeholder="email*" value="" required>
                             <div id="error-email" class="error email"></div> <!-- messaggio errore input email -->
-                            <textarea id="message" name="message" placeholder="message*" required></textarea>
+                            <textarea id="message" class="w-100" name="message" placeholder="message*" required></textarea>
                             <div id="error-message" class="error message"></div> <!-- messaggio errore input message -->
                         </div> 
                         <button id="send-button" class="cta contact-us" disabled>SEND</button>
@@ -259,11 +260,11 @@
             </div>
         </main>
         <footer id="my-footer" class="min-width">
-            <div class="container">
+            <div class="container d-flex">
                 <div class="logo-footer">
-                    <img src="assets/images/logo-playground-white.png" alt="playground-logo">
+                    <img class="w-100" src="assets/images/logo-playground-white.png" alt="playground-logo">
                 </div>
-                <ul class="footer-link">
+                <ul class="footer-link w-100 d-flex menu">
                     <li>
                         <a href="#we-are">we are</a>
                     </li>
@@ -277,7 +278,7 @@
                         <a href="#contact-us">contact us</a>
                     </li>
                 </ul>
-                <div class="social">
+                <div class="social d-flex">
                     <a href="#">
                         <i class="fab fa-facebook-square"></i>
                     </a>
@@ -291,7 +292,7 @@
             </div>
         </footer>
 
-        <div id="cookie-banner" class="cookie-banner">
+        <div id="cookie-banner" class="w-100 d-flex">
             <p class="caption">
                 Our website uses cookies to improve your experience. 
                 To find out more about the cookies we use please see our Cookies Policy.
