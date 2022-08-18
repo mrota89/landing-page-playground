@@ -58,8 +58,7 @@
             <!-- slider-hero-->
             <div class="owl-carousel owl-theme header">
                 <div class="slider-card hello">
-                    <!-- layer visibile da mobile per migliorare leggibilità del testo -->
-                    <div class="overlay-slider"></div>
+                    <div class="overlay-slider"></div><!-- layer visibile da mobile per migliorare leggibilità del testo -->
                     <div class="text">
                         <h1 class="caption">lorem<br>ipsum.</h1>
                         <p class="caption">
@@ -97,7 +96,7 @@
 
         <main class="min-width">
             <!-- section-card-desktop -->
-            <div class="cards desktop min-width d-lg-show">
+            <div class="cards desktop min-width d-lg-show reveal">
                 <div class="container d-flex">
                     <div class="card d-flex">
                         <div class="title play-harder w-100"></div>
@@ -130,7 +129,7 @@
             </div>
 
             <!-- section cards mobile -->
-            <div class="cards mobile min-width d-lg-hide">
+            <div class="cards mobile min-width d-lg-hide reveal">
                 <div class="owl-carousel owl-theme section-card d-sm-show d-lg-hide">
                     <div class="card">
                         <div class="title play-harder"></div>
@@ -164,10 +163,10 @@
 
             <!-- section banners -->
             <div class="banners min-width">
-                <div id="we-are" class="banner w-100 d-flex">
+                <div id="we-are" class="banner w-100 d-flex reveal">
                     <div class="banner-image we-are"></div>
                     <div class="banner-text">
-                        <div class="inner-text">
+                        <div class="inner-text ">
                             <h1 class="title caption">we<br>are.</h1>
                             <p class="text-body caption">
                                 Consectetur adipiscing elit.<br>
@@ -177,7 +176,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="we-do" class="banner w-100 d-flex">
+                <div id="we-do" class="banner w-100 d-flex reveal">
                     <div class="banner-image we-do"></div>
                     <div class="banner-text">
                         <div class="inner-text d-flex">
@@ -190,7 +189,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="careers" class="banner w-100 d-flex">
+                <div id="careers" class="banner w-100 d-flex reveal">
                     <div class="banner-image careers"></div>
                     <div class="banner-text">
                         <div class="inner-text">
@@ -206,7 +205,7 @@
             </div>
 
             <!-- section 3 tabs -->
-            <div class="tabs min-width">
+            <div class="tabs min-width reveal">
                 <div class="container d-flex">
                     <div class="tabs-box">
                         <div class="cta" onclick="getTabContent('Vestibulum at odio sit amet')">
@@ -226,7 +225,7 @@
             </div>
 
             <!-- section form contact us-->
-            <div id="contact-us" class="form min-width" onmouseleave="resetFieldError()">
+            <div id="contact-us" class="form min-width reveal" onmouseleave="resetFieldError()">
                 <div class="container d-flex">
                     <div class="contact-us d-flex">
                         <h1 class="title caption d-lg-show">contact<br>us.</h1>
@@ -259,6 +258,7 @@
                 </div>
             </div>
         </main>
+
         <footer id="my-footer" class="min-width">
             <div class="container d-flex">
                 <div class="logo-footer">
@@ -279,23 +279,27 @@
                     </li>
                 </ul>
                 <div class="social d-flex">
-                    <a href="#">
+                    <a href="https://www.facebook.com/playground.digital.agency">
                         <i class="fab fa-facebook-square"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.linkedin.com/company/playground-digital-agency">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/playground_agency/?hl=it">
                         <i class="fab fa-instagram"></i>
                     </a>
                 </div>
             </div>
         </footer>
 
+        <!-- banner cookie -->
         <div id="cookie-banner" class="w-100 d-flex">
             <p class="caption">
                 Our website uses cookies to improve your experience. 
-                To find out more about the cookies we use please see our Cookies Policy.
+                To find out more about the cookies we use please see our 
+                <a href="https://www.iubenda.com/privacy-policy/52192112/cookie-policy">
+                    Cookies Policy.
+                </a> 
             </p>
             <div class="cta" onclick="acceptCookie()">OK</div>
         </div>

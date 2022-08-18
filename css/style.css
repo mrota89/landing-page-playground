@@ -29,6 +29,11 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: var(--text-accent);
+}
+
 .w-100{
     width: 100%;
 }
@@ -58,7 +63,7 @@ html {
     min-width: 100%;
 }
 
-/*munu navbar e footer*/
+/*menu navbar e footer*/
 .menu a {
     text-decoration: none;
     color: var(--text-primary);
@@ -85,7 +90,6 @@ html {
     width: 100%; 
     left: 0; 
 }
-
 
 /*caption*/
 h1.caption {
@@ -137,6 +141,18 @@ p.caption {
 
 .m-b-cookie {
     margin-bottom: 6em;
+}
+
+/*animation page section*/
+.reveal{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /***********
@@ -586,12 +602,7 @@ div#contact-us .inner-form .bottom-input .error {
     top: 7%;
     width: fit-content;
     padding-bottom: 1em;
-}
-
-div#contact-us .inner-form .bottom-input .error.message {
-    top: 95%;
-    left: 49%;
-    width: 24em;
+    transition: display 0.3s;
 }
 
 div#contact-us .inner-form .cta.contact-us {
@@ -931,18 +942,19 @@ MEDIA QUERIES MAX-WIDTH
 /*********
 ANIMATION
 *********/
-@-moz-keyframes spin { 
-    100% { -moz-transform: rotate(360deg); } 
-}
-@-webkit-keyframes spin { 
-    100% { -webkit-transform: rotate(360deg); } 
-}
+/*loadre spinner*/
 @keyframes spin { 
     100% { 
-        -webkit-transform: rotate(360deg); 
         transform:rotate(360deg); 
     } 
 }
+
+@-ms-keyframes spin { 
+    100% { 
+        -ms-transform:rotate(360deg); 
+    } 
+}
+
 
 
 

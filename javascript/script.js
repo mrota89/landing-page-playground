@@ -3,6 +3,9 @@ $('.owl-carousel.header').owlCarousel({
     loop:true,
     responsiveClass:true,
     navText:["<div class='nav-btn prev-slide'></div>","<div class='nav-btn next-slide'></div>"],
+    autoplay:false,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:1,
@@ -19,6 +22,9 @@ $('.owl-carousel.header').owlCarousel({
 $('.owl-carousel.section-card').owlCarousel({
     loop:true,
     responsiveClass:true,
+    autoplay:true,
+    autoplayTimeout:3000,
+    autoplayHoverPause:true,
     margin:15,
     responsive:{
         0:{
@@ -57,9 +63,25 @@ function closeNav() {
     }, 200);
 }
 
+function reveal() {
+    const reveals = document.querySelectorAll(".reveal");
+    reveals.forEach(element => {
+        const windowHeight = window.innerHeight; //altezza viewport
+        const elementTop = element.getBoundingClientRect().top; //distanza dell'elemento dal viewpoint
+        const elementVisible = 150; //distanza "da scrollare" prima che l'elemento venga mostrato
+        if (elementTop < windowHeight - elementVisible) {
+            element.classList.add("active");
+        }
+    })
+}
+
+//animazione onscroll degli elementi in pagina
+window.addEventListener("scroll", reveal);
+
 //applica comportamento "sticky" della navbar on scroll e onload
-window.onscroll = stickyOnScroll;
-window.onload = stickyOnScroll;
+window.addEventListener("scroll", stickyOnScroll);
+window.addEventListener("load", stickyOnScroll);
+
 
 
 
