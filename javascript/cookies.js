@@ -54,4 +54,5 @@ function callbackCookie() {
     }
 }
 
-window.onload = callbackCookie();
+window.addEventListener("load", callbackCookie);
+

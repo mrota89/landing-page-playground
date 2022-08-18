@@ -1,4 +1,4 @@
-//prepara stringa con testo per contenuto tab
+//prepara stringa con testo per contenuto della tab
 function createContentTab(xhr) {
     let response = xhr.response;
     let responseParsed = null;
@@ -62,8 +62,7 @@ function getTabContent(tabTitle) {
 
     //al termine del caricamento eseguo render della response
     xhr.onloadend = function() {
-        //setTimeout serve per simulare ritardo nella risposta
-        setTimeout(() => {
+        setTimeout(() => { //setTimeout serve per simulare ritardo nella risposta
             if (this.readyState == 4 && this.status == 200) {
                 createContentTab(xhr);  
             } else {
@@ -77,6 +76,6 @@ function getTabContent(tabTitle) {
 }
 
 //al caricamento della pagina, mostro il primo tab
-window.onload = getTabContent("Vestibulum at odio sit amet");
+window.addEventListener("load", getTabContent("Vestibulum at odio sit amet"));
 
   

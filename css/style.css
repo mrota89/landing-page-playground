@@ -42,17 +42,6 @@ a {
     display: flex;
 }
 
-.flex-center-between {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.flex-center {
-    display: flex;
-    align-items: center;
-}
-
 .container {
     margin: 0 auto;
     width: 100%;
@@ -139,10 +128,6 @@ p.caption {
     cursor: pointer;
 }
 
-.m-b-cookie {
-    margin-bottom: 6em;
-}
-
 /*animation page section*/
 .reveal{
     transform: translateY(150px);
@@ -153,6 +138,10 @@ p.caption {
 .reveal.active{
     transform: translateY(0);
     opacity: 1;
+}
+
+.m-b-cookie {
+    margin-bottom: 6em;
 }
 
 /***********
@@ -176,12 +165,16 @@ p.caption {
     background-color: var(--background-accent-banner);
 }
 
-.my-header .container .navbar {
+.my-header .container .navbar,
+.navbar .menu {
     height: 10vh;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container .navbar .playground {/*logo navbar*/
     width: 12em;
+    align-items: center;
 }
 
 .navbar .menu {
@@ -299,7 +292,6 @@ div.cards .container .card {
     width: calc((100% - 4em) / 3);
     flex-direction: column;
     align-items: center;
-    transition: 1s;
 }
 
 div.cards .container .card:nth-child(2) {
@@ -455,7 +447,6 @@ div.banners .banner:nth-child(2) {
     color: var(--text-primary)
 }
 
-
 /***********
 SECTION TABS
 ***********/
@@ -523,8 +514,6 @@ div.tabs .container .text-box {
 div.tabs .container .text-box img {/*loader*/
     width: 50px;
     height: 50px;
-    -webkit-animation:spin .5s linear infinite;
-    -moz-animation:spin .5s linear infinite;
     animation:spin .5s linear infinite;
     transform-origin: 50% 50%;
 }
@@ -560,17 +549,16 @@ div#contact-us .contact-us .title {
     display: none;
 }
 
+/*form*/
 div#contact-us .inner-form input, 
 div#contact-us .inner-form  textarea {
     background-color: var(--background-accent-banner);
     border: solid 2px var(--background-accent);
     color: var(--text-primary);
-    transition: 0.5s;
-    margin-bottom: 1em;
 }
 
 div#contact-us .inner-form input {
-    height: 3em;
+    height: 3.5em;
     padding-left: 1em;
 }
 
@@ -592,19 +580,18 @@ div#contact-us .inner-form .top-input {
 
 div#contact-us .inner-form .top-input input {
     width: 48%;
+    margin-bottom: 1em;
 }
 
 div#contact-us .inner-form .bottom-input .error {
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: bold;
     color: rgb(255, 0, 0);
-    left: 62%;
-    top: 7%;
     width: fit-content;
     padding-bottom: 1em;
-    transition: display 0.3s;
 }
 
+/*submit button enabled*/
 div#contact-us .inner-form .cta.contact-us {
     width: fit-content;
     background-color: var(--background-primary);
@@ -628,6 +615,7 @@ div#contact-us .inner-form .cta.contact-us::after {
     color: var(--text-accent);
 }
 
+/*submit button disabled*/
 div#contact-us .inner-form .cta.contact-us:disabled {
     color: var(--text-primary);
     background-color: var(--background-accent-banner);
@@ -946,12 +934,6 @@ ANIMATION
 @keyframes spin { 
     100% { 
         transform:rotate(360deg); 
-    } 
-}
-
-@-ms-keyframes spin { 
-    100% { 
-        -ms-transform:rotate(360deg); 
     } 
 }
 
