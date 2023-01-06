@@ -52,13 +52,6 @@ function messageCheck() {
     enableButtonSend(validateMessage, validateEmail);
 }
 
-/*svuota l'alert di errore input quando il cursore
-abbandona la sezione del form (richiamata da html)*/
-function resetFieldError() {
-    getErrorEmail.innerText = "";
-    getErrorMessage.innerText = "";
-}
-
 //validazione email
 getEmail.addEventListener("keyup",emailCheck);
 getEmail.addEventListener("blur", emailCheck);
