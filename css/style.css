@@ -930,7 +930,7 @@ MEDIA QUERIES MAX-WIDTH
 /*********
 ANIMATION
 *********/
-/*loadre spinner*/
+/*loader spinner*/
 @keyframes spin { 
     100% { 
         transform:rotate(360deg); 
