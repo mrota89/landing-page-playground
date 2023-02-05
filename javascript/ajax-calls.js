@@ -4,7 +4,7 @@ function createContentTab(xhr) {
     let responseParsed = null;
     let stringContent = "";
 
-    if(response !== "") {
+    if (response !== "") {
         responseParsed = JSON.parse(response);
         responseParsed.item.content.forEach(element => {
             stringContent += `${element}${" "}`;
@@ -42,7 +42,7 @@ function getTabContent(tabTitle) {
         let elementClassList = e.target.classList;
         //controllo quale tab è precedentemente attivata e la disattivo
         allTabs.forEach(element => {
-            if(!element.className.includes("disabled")) {
+            if (!element.className.includes("disabled")) {
                 element.classList.add("disabled");
             }
         })
@@ -61,14 +61,12 @@ function getTabContent(tabTitle) {
     };
 
     //al termine del caricamento eseguo render della response
-    xhr.onloadend = function() {
+    xhr.onloadend = function () {
         setTimeout(() => { //setTimeout serve per simulare ritardo nella risposta
             if (this.readyState == 4 && this.status == 200) {
-                createContentTab(xhr);  
-            } else {
-                if(this.status >= 400) {
-                    console.error(`There was a problem with the request. Error code: ${this.status}`);
-                }
+                createContentTab(xhr);
+            } else if (this.status >= 400) {
+                console.error(`There was a problem with the request. Error code: ${this.status}`);
             }
         }, 1500)
     };
@@ -78,4 +76,3 @@ function getTabContent(tabTitle) {
 //al caricamento della pagina, mostro il primo tab
 window.addEventListener("load", getTabContent("Vestibulum at odio sit amet"));
 
-  

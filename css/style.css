@@ -516,6 +516,8 @@ div.tabs .container .text-box img {/*loader*/
     height: 50px;
     animation:spin .5s linear infinite;
     transform-origin: 50% 50%;
+    position: relative;
+    top: calc(50% - 3em)
 }
 
 /*****************

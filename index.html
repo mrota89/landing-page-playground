@@ -1,317 +1,324 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
-        <link rel="stylesheet" href="assets/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
-        <link rel="stylesheet" href="css/hamburger-menu.css">
-        <link rel="stylesheet" href="css/style.css">
-        <title>Playground</title>
-        <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    </head>
-    <body>
-        <header class="my-header min-width">        
-            <div class="container d-lg-show min-width">
-                <!-- navbar desktop-->
-               <nav class="navbar d-flex w-100 reveal">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/hamburger-menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Playground</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+</head>
+
+<body>
+    <header class="my-header min-width">
+        <div class="container d-lg-show min-width">
+            <!-- navbar desktop-->
+            <nav class="navbar d-flex w-100 reveal">
+                <a href="#playground">
                     <div class="playground d-flex">
                         <img class="w-100" src="assets/images/logo-playground-white.png" alt="playground-logo">
                     </div>
-                    
-                    <div class="menu d-flex">
-                        <div class="menu-element">
-                            <a href="#we-are">we are</a>
-                        </div>
-                        <div class="menu-element">
-                            <a href="#we-do">we do</a>
-                        </div>
-                        <div class="menu-element">
-                            <a href="#careers">careers</a>
-                        </div>
-                        <div class="menu-element">
-                            <a href="#contact-us">contact us</a>
-                        </div>
+                </a>
+                <div class="menu d-flex">
+                    <div class="menu-element">
+                        <a href="#we-are">we are</a>
                     </div>
-                </nav>
-                <!-- /navbar desktop-->
-            </div>
+                    <div class="menu-element">
+                        <a href="#we-do">we do</a>
+                    </div>
+                    <div class="menu-element">
+                        <a href="#careers">careers</a>
+                    </div>
+                    <div class="menu-element">
+                        <a href="#contact-us">contact us</a>
+                    </div>
+                </div>
+            </nav>
+            <!-- /navbar desktop-->
+        </div>
 
-            <!-- navbar mobile-->
-            <div id="mobile-nav" class="overlay d-lg-hide">
-                <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
-                <div class="overlay-content">
-                    <div id="logo-navbar-mobile" class="playground">
-                        <img src="assets/images/logo-playground-black.png" alt="playground-logo">
-                    </div>
-                    <a href="#we-are" onclick="closeNav()">we are</a>
-                    <a href="#we-do" onclick="closeNav()">we do</a>
-                    <a href="#careers" onclick="closeNav()">careers</a>
-                    <a href="#contact-us" onclick="closeNav()">contact us</a>
+        <!-- navbar mobile-->
+        <div id="mobile-nav" class="overlay d-lg-hide">
+            <a href="javascript:void(0)" id="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <div id="logo-navbar-mobile" class="playground">
+                    <img src="assets/images/logo-playground-black.png" alt="playground-logo">
                 </div>
+                <a href="#we-are" onclick="closeNav()">we are</a>
+                <a href="#we-do" onclick="closeNav()">we do</a>
+                <a href="#careers" onclick="closeNav()">careers</a>
+                <a href="#contact-us" onclick="closeNav()">contact us</a>
             </div>
-            <div class="d-lg-hide" id="open-btn" onclick="openNav()">
-                <i class="fas fa-bars"></i>
-            </div>
-            <!-- /navbar mobile-->
+        </div>
+        <div class="d-lg-hide" id="open-btn" onclick="openNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <!-- /navbar mobile-->
 
-            <!-- slider-hero-->
-            <div class="owl-carousel owl-theme header">
-                <div class="slider-card hello">
-                    <div class="overlay-slider"></div><!-- layer visibile da mobile per migliorare leggibilità del testo -->
-                    <div class="text">
-                        <h1 class="caption">lorem<br>ipsum.</h1>
-                        <p class="caption">
-                            Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
-                            Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
-                            in semper nisl bibendum eu.
-                        </p>
-                    </div>
-                </div>
-                <div class="slider-card play">
-                    <div class="overlay-slider"></div>
-                    <div class="text">
-                        <h1 class="caption">lorem<br>ipsum.</h1>
-                        <p class="caption">
-                            Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
-                            Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
-                            in semper nisl bibendum eu.
-                        </p>
-                    </div>
-                </div>
-                <div class="slider-card circle">
-                    <div class="overlay-slider"></div>
-                    <div class="text">
-                        <h1 class="caption">lorem<br>ipsum.</h1>
-                        <p class="caption">
-                            Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
-                            Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
-                            in semper nisl bibendum eu.
-                        </p>
-                    </div>
-                </div>
-            </div> 
-            <!-- /slider-hero-->
-        </header>
-
-        <main class="min-width">
-            <!-- section-card-desktop -->
-            <div class="cards desktop min-width d-lg-show reveal">
-                <div class="container d-flex">
-                    <div class="card d-flex">
-                        <div class="title play-harder w-100"></div>
-                        <div class="text">
-                            Aenean mollis dolor a mattis viverra. 
-                            In hac habitasse platea dictumst. 
-                            Curabitur tempus dui tortor, et bibendum lacus eleifend ut.
-                        </div>
-                        <div class="cta">READ MORE</div>
-                    </div>
-                    <div class="card d-flex">
-                        <div class="title simplicity w-100"></div>
-                        <div class="text">
-                            Donec vitae augue tellus. 
-                            Proin et urna sit amet metus 
-                            fermentum dapibus non quis urna.
-                        </div>
-                        <div class="cta">READ MORE</div>
-                    </div>
-                    <div class="card d-flex">
-                        <div class="title innovation w-100"></div>
-                        <div class="text">
-                            Suspendisse vehicula, 
-                            lectus sed molestie aliquam, 
-                            arcu neque gravida lacus.
-                        </div>
-                        <div class="cta">READ MORE</div>
-                    </div>
+        <!-- slider-hero-->
+        <div id="playground" class="owl-carousel owl-theme header">
+            <div class="slider-card hello">
+                <div class="overlay-slider"></div><!-- layer visibile da mobile per migliorare leggibilità del testo -->
+                <div class="text">
+                    <h1 class="caption">lorem<br>ipsum.</h1>
+                    <p class="caption">
+                        Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
+                        Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
+                        in semper nisl bibendum eu.
+                    </p>
                 </div>
             </div>
-
-            <!-- section cards mobile -->
-            <div class="cards mobile min-width d-lg-hide reveal">
-                <div class="owl-carousel owl-theme section-card d-sm-show d-lg-hide">
-                    <div class="card">
-                        <div class="title play-harder"></div>
-                        <div class="text">
-                            Aenean mollis dolor a mattis viverra. 
-                            In hac habitasse platea dictumst. 
-                            Curabitur tempus dui tortor, et bibendum lacus eleifend ut.
-                        </div>
-                        <div class="cta">READ MORE</div>
-                    </div>
-                    <div class="card">
-                        <div class="title simplicity"></div>
-                        <div class="text">
-                            Donec vitae augue tellus. 
-                            Proin et urna sit amet metus 
-                            fermentum dapibus non quis urna.
-                        </div>
-                        <div class="cta">READ MORE</div>
-                    </div>
-                    <div class="card">
-                        <div class="title innovation"></div>
-                        <div class="text">
-                            Suspendisse vehicula, 
-                            lectus sed molestie aliquam, 
-                            arcu neque gravida lacus.
-                        </div>
-                        <div class="cta">READ MORE</div>
-                    </div>
-                </div> 
-            </div>
-
-            <!-- section banners -->
-            <div class="banners min-width">
-                <div id="we-are" class="banner w-100 d-flex reveal">
-                    <div class="banner-image we-are"></div>
-                    <div class="banner-text">
-                        <div class="inner-text ">
-                            <h1 class="title caption">we<br>are.</h1>
-                            <p class="text-body caption">
-                                Consectetur adipiscing elit.<br>
-                                Nulla condimentum tortor sem.
-                            </p>
-                            <div class="cta">THE PLAYERS</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="we-do" class="banner w-100 d-flex reveal">
-                    <div class="banner-image we-do"></div>
-                    <div class="banner-text">
-                        <div class="inner-text d-flex">
-                            <h1 class="title caption">we<br>do.</h1>
-                            <p class="text-body caption">
-                                Consectetur adipiscing elit.<br>
-                                Nulla condimentum tortor sem.
-                            </p>
-                            <div class="cta">THE PROJECTS</div>
-                        </div>
-                    </div>
-                </div>
-                <div id="careers" class="banner w-100 d-flex reveal">
-                    <div class="banner-image careers"></div>
-                    <div class="banner-text">
-                        <div class="inner-text">
-                            <h1 class="title caption">careers.</h1>
-                            <p class="text-body caption">
-                                Consectetur adipiscing elit.<br>
-                                Nulla condimentum tortor sem.
-                            </p>
-                            <div class="cta">THE POSITION</div>
-                        </div>
-                    </div>
+            <div class="slider-card play">
+                <div class="overlay-slider"></div>
+                <div class="text">
+                    <h1 class="caption">lorem<br>ipsum.</h1>
+                    <p class="caption">
+                        Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
+                        Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
+                        in semper nisl bibendum eu.
+                    </p>
                 </div>
             </div>
-
-            <!-- section 3 tabs -->
-            <div class="tabs min-width reveal">
-                <div class="container d-flex">
-                    <div class="tabs-box">
-                        <div class="cta" onclick="getTabContent('Vestibulum at odio sit amet')">
-                            Vestibulum at odio sit amet
-                        </div>
-                        <div class="cta disabled" onclick="getTabContent('Sed vehicula neque')">
-                            Sed vehicula neque
-                        </div>
-                        <div class="cta disabled" onclick="getTabContent('Nulla id libero pretium')">
-                            Nulla id libero pretium
-                        </div>
-                    </div>
-                    <div id="tab-text-box" class="text-box d-flex">
-                        <img src="assets/images/loader.png" alt="loader">
-                    </div>
+            <div class="slider-card circle">
+                <div class="overlay-slider"></div>
+                <div class="text">
+                    <h1 class="caption">lorem<br>ipsum.</h1>
+                    <p class="caption">
+                        Consectetur adipiscing elit.<br class="d-md-hide d-lg-show">
+                        Nulla condimentum tortor sem,<br class="d-md-hide d-lg-show">
+                        in semper nisl bibendum eu.
+                    </p>
                 </div>
             </div>
+        </div>
+        <!-- /slider-hero-->
+    </header>
 
-            <!-- section form contact us-->
-            <div id="contact-us" class="form min-width reveal">
-                <div class="container d-flex">
-                    <div class="contact-us d-flex">
-                        <h1 class="title caption d-lg-show">contact<br>us.</h1>
-                        <p class="caption">
-                            Playground srl<br>
-                            Via G. Mazzini 3/C,<br>
-                            Cernusco Sul Naviglio (Milano)<br>
-                            -<br>
-                            T +39 02400706003
-                        </p>
-                    </div>
-
-                    <form action="javascript:void(0)" class="inner-form d-flex" method="post" autocomplete="off">
-                        <h1 class="title caption d-lg-hide">contact us.</h1>
-
-                        <div class="top-input w-100 d-flex">
-                            <input type="text" id="first-name" name="firstName" placeholder="name" value="">
-                            <input type="text" id="last-name" name="lastName" placeholder="last name" value="">
-                        </div>
-
-                        <div class="bottom-input w-100">
-                            <input type="email" id="email" class="w-100" name="email" placeholder="email*" value="" required>
-                            <div id="error-email" class="error email"></div> <!-- messaggio errore input email -->
-                            <textarea id="message" class="w-100" name="message" placeholder="message*" required></textarea>
-                            <div id="error-message" class="error message"></div> <!-- messaggio errore input message -->
-                        </div> 
-                        <button id="send-button" class="cta contact-us" disabled>SEND</button>
-                    </form>
-
-                </div>
-            </div>
-        </main>
-
-        <footer id="my-footer" class="min-width">
+    <main class="min-width">
+        <!-- section-card-desktop -->
+        <div class="cards desktop min-width d-lg-show reveal">
             <div class="container d-flex">
+                <div class="card d-flex">
+                    <div class="title play-harder w-100"></div>
+                    <div class="text">
+                        Aenean mollis dolor a mattis viverra.
+                        In hac habitasse platea dictumst.
+                        Curabitur tempus dui tortor, et bibendum lacus eleifend ut.
+                    </div>
+                    <div class="cta">READ MORE</div>
+                </div>
+                <div class="card d-flex">
+                    <div class="title simplicity w-100"></div>
+                    <div class="text">
+                        Donec vitae augue tellus.
+                        Proin et urna sit amet metus
+                        fermentum dapibus non quis urna.
+                    </div>
+                    <div class="cta">READ MORE</div>
+                </div>
+                <div class="card d-flex">
+                    <div class="title innovation w-100"></div>
+                    <div class="text">
+                        Suspendisse vehicula,
+                        lectus sed molestie aliquam,
+                        arcu neque gravida lacus.
+                    </div>
+                    <div class="cta">READ MORE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section cards mobile -->
+        <div class="cards mobile min-width d-lg-hide reveal">
+            <div class="owl-carousel owl-theme section-card d-sm-show d-lg-hide">
+                <div class="card">
+                    <div class="title play-harder"></div>
+                    <div class="text">
+                        Aenean mollis dolor a mattis viverra.
+                        In hac habitasse platea dictumst.
+                        Curabitur tempus dui tortor, et bibendum lacus eleifend ut.
+                    </div>
+                    <div class="cta">READ MORE</div>
+                </div>
+                <div class="card">
+                    <div class="title simplicity"></div>
+                    <div class="text">
+                        Donec vitae augue tellus.
+                        Proin et urna sit amet metus
+                        fermentum dapibus non quis urna.
+                    </div>
+                    <div class="cta">READ MORE</div>
+                </div>
+                <div class="card">
+                    <div class="title innovation"></div>
+                    <div class="text">
+                        Suspendisse vehicula,
+                        lectus sed molestie aliquam,
+                        arcu neque gravida lacus.
+                    </div>
+                    <div class="cta">READ MORE</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section banners -->
+        <div class="banners min-width">
+            <div id="we-are" class="banner w-100 d-flex reveal">
+                <div class="banner-image we-are"></div>
+                <div class="banner-text">
+                    <div class="inner-text ">
+                        <h1 class="title caption">we<br>are.</h1>
+                        <p class="text-body caption">
+                            Consectetur adipiscing elit.<br>
+                            Nulla condimentum tortor sem.
+                        </p>
+                        <div class="cta">THE PLAYERS</div>
+                    </div>
+                </div>
+            </div>
+            <div id="we-do" class="banner w-100 d-flex reveal">
+                <div class="banner-image we-do"></div>
+                <div class="banner-text">
+                    <div class="inner-text d-flex">
+                        <h1 class="title caption">we<br>do.</h1>
+                        <p class="text-body caption">
+                            Consectetur adipiscing elit.<br>
+                            Nulla condimentum tortor sem.
+                        </p>
+                        <div class="cta">THE PROJECTS</div>
+                    </div>
+                </div>
+            </div>
+            <div id="careers" class="banner w-100 d-flex reveal">
+                <div class="banner-image careers"></div>
+                <div class="banner-text">
+                    <div class="inner-text">
+                        <h1 class="title caption">careers.</h1>
+                        <p class="text-body caption">
+                            Consectetur adipiscing elit.<br>
+                            Nulla condimentum tortor sem.
+                        </p>
+                        <div class="cta">THE POSITION</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- section 3 tabs -->
+        <div class="tabs min-width reveal">
+            <div class="container d-flex">
+                <div class="tabs-box">
+                    <div class="cta" onclick="getTabContent('Vestibulum at odio sit amet')">
+                        Vestibulum at odio sit amet
+                    </div>
+                    <div class="cta disabled" onclick="getTabContent('Sed vehicula neque')">
+                        Sed vehicula neque
+                    </div>
+                    <div class="cta disabled" onclick="getTabContent('Nulla id libero pretium')">
+                        Nulla id libero pretium
+                    </div>
+                </div>
+                <div id="tab-text-box" class="text-box d-flex">
+                    <img src="assets/images/loader.png" alt="loader">
+                </div>
+            </div>
+        </div>
+
+        <!-- section form contact us-->
+        <div id="contact-us" class="form min-width reveal">
+            <div class="container d-flex">
+                <div class="contact-us d-flex">
+                    <h1 class="title caption d-lg-show">contact<br>us.</h1>
+                    <p class="caption">
+                        Playground srl<br>
+                        Via G. Mazzini 3/C,<br>
+                        Cernusco Sul Naviglio (Milano)<br>
+                        -<br>
+                        T +39 02400706003
+                    </p>
+                </div>
+
+                <form action="javascript:void(0)" class="inner-form d-flex" method="post" autocomplete="off">
+                    <h1 class="title caption d-lg-hide">contact us.</h1>
+
+                    <div class="top-input w-100 d-flex">
+                        <input type="text" id="first-name" name="firstName" placeholder="name" value="">
+                        <input type="text" id="last-name" name="lastName" placeholder="last name" value="">
+                    </div>
+
+                    <div class="bottom-input w-100">
+                        <input type="email" id="email" class="w-100" name="email" placeholder="email*" value=""
+                            required>
+                        <div id="error-email" class="error email"></div> <!-- messaggio errore input email -->
+                        <textarea id="message" class="w-100" name="message" placeholder="message*" required></textarea>
+                        <div id="error-message" class="error message"></div> <!-- messaggio errore input message -->
+                    </div>
+                    <button id="send-button" class="cta contact-us" disabled>SEND</button>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+    <footer id="my-footer" class="min-width">
+        <div class="container d-flex">
+            <a href="#playground">
                 <div class="logo-footer">
                     <img class="w-100" src="assets/images/logo-playground-white.png" alt="playground-logo">
                 </div>
-                <ul class="footer-link w-100 d-flex menu">
-                    <li>
-                        <a href="#we-are">we are</a>
-                    </li>
-                    <li>
-                        <a href="#we-do">we do</a>
-                    </li>
-                    <li>
-                        <a href="#careers">careers</a>
-                    </li>
-                    <li>
-                        <a href="#contact-us">contact us</a>
-                    </li>
-                </ul>
-                <div class="social d-flex">
-                    <a href="https://www.facebook.com/playground.digital.agency">
-                        <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/playground-digital-agency">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://www.instagram.com/playground_agency/?hl=it">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
+            </a>
+            <ul class="footer-link w-100 d-flex menu">
+                <li>
+                    <a href="#we-are">we are</a>
+                </li>
+                <li>
+                    <a href="#we-do">we do</a>
+                </li>
+                <li>
+                    <a href="#careers">careers</a>
+                </li>
+                <li>
+                    <a href="#contact-us">contact us</a>
+                </li>
+            </ul>
+            <div class="social d-flex">
+                <a href="https://www.facebook.com/playground.digital.agency">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/playground-digital-agency">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/playground_agency/?hl=it">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
-        </footer>
-
-        <!-- banner cookie -->
-        <div id="cookie-banner" class="w-100 d-flex">
-            <p class="caption">
-                Our website uses cookies to improve your experience. 
-                To find out more about the cookies we use please see our 
-                <a href="https://www.iubenda.com/privacy-policy/52192112/cookie-policy">
-                    Cookies Policy.
-                </a> 
-            </p>
-            <div class="cta" onclick="acceptCookie()">OK</div>
         </div>
+    </footer>
+
+    <!-- banner cookie -->
+    <div id="cookie-banner" class="w-100 d-flex">
+        <p class="caption">
+            Our website uses cookies to improve your experience.
+            To find out more about the cookies we use please see our
+            <a href="https://www.iubenda.com/privacy-policy/52192112/cookie-policy">
+                Cookies Policy.
+            </a>
+        </p>
+        <div class="cta" onclick="acceptCookie()">OK</div>
+    </div>
 
 
-        <script src="javascript/owl-carousel/jquery-3.6.0.min.js"></script>   
-        <script src="javascript/owl-carousel/owl.carousel.min.js"></script>
-        <script src="javascript/ajax-calls.js"></script>
-        <script src="javascript/check-input-form.js"></script>
-        <script src="javascript/cookies.js"></script>
-        <script src="javascript/script.js"></script>
+    <script src="javascript/owl-carousel/jquery-3.6.0.min.js"></script>
+    <script src="javascript/owl-carousel/owl.carousel.min.js"></script>
+    <script src="javascript/ajax-calls.js"></script>
+    <script src="javascript/check-input-form.js"></script>
+    <script src="javascript/cookies.js"></script>
+    <script src="javascript/script.js"></script>
 
-    </body>
+</body>
+
 </html>
